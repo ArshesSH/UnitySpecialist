@@ -1,34 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public abstract class DataPersisterEditor : Editor
-    {
-        IDataPersister m_DataPersister;
-
-        protected virtual void OnEnable()
-        {
-            m_DataPersister = (IDataPersister)target;
-        }
-
-        public override void OnInspectorGUI()
-        {
-            DrawDefaultInspector();
-
-            DataPersisterGUI (m_DataPersister);
-        }
-
-        public static void DataPersisterGUI (IDataPersister dataPersister)
-        {
-            DataSettings dataSettings = dataPersister.GetDataSettings ();
-
-            DataSettings.PersistenceType persistenceType = (DataSettings.PersistenceType)EditorGUILayout.EnumPopup ("Persistence Type", dataSettings.persistenceType);
-            string dataTag = EditorGUILayout.TextField ("Data Tag", dataSettings.dataTag);
-
-            dataPersister.SetDataSettings (dataTag, persistenceType);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71a79d3e219b3ee9a0c0c0ac6e2e24bc4dc87abf4b00fd1b6392eaf4631fa925
+size 1034

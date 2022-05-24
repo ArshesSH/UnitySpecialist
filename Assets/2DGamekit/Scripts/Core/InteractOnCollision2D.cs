@@ -1,30 +1,3 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-
-namespace Gamekit2D
-{
-    [RequireComponent(typeof(Collider2D))]
-    public class InteractOnCollision2D : MonoBehaviour
-    {
-        public LayerMask layers;
-        public UnityEvent OnCollision;
-
-        void Reset()
-        {
-            layers = LayerMask.NameToLayer("Everything");
-        }
-
-        void OnCollisionEnter2D (Collision2D collision)
-        {
-            if (layers.Contains (collision.gameObject))
-            {
-                OnCollision.Invoke();
-            }
-        }
-
-        void OnDrawGizmos()
-        {
-            Gizmos.DrawIcon(transform.position, "InteractionTrigger", false);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b7ca811b85152a9cf65a1c073ec96f3ba28caf700fcf65602877f612ea0ae6c
+size 709

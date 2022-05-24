@@ -1,29 +1,3 @@
-﻿using TMPro;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class TranslatedText : MonoBehaviour
-    {
-        public TextMeshProUGUI text;
-        public string phraseKey;
-        public bool setTextOnStart = true;
-
-        void Awake ()
-        {
-            if (text == null)
-                text = GetComponent<TextMeshProUGUI> ();
-        }
-
-        void Start ()
-        {
-            if(setTextOnStart)
-                text.text = Translator.Instance[phraseKey];
-        }
-
-        public void SetText ()
-        {
-            text.text = Translator.Instance[phraseKey];
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c5c698d6b3c841ec34b4a0ad1b186b934af6526de36ed167aa29ae6ba9292f3
+size 632

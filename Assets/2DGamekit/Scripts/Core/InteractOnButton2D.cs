@@ -1,33 +1,3 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-
-namespace Gamekit2D
-{
-    public class InteractOnButton2D : InteractOnTrigger2D
-    {
-        public UnityEvent OnButtonPress;
-
-        bool m_CanExecuteButtons;
-
-        protected override void ExecuteOnEnter(Collider2D other)
-        {
-            m_CanExecuteButtons = true;
-            OnEnter.Invoke ();
-        }
-
-        protected override void ExecuteOnExit(Collider2D other)
-        {
-            m_CanExecuteButtons = false;
-            OnExit.Invoke ();
-        }
-
-        void Update()
-        {
-            if (m_CanExecuteButtons)
-            {
-                if (OnButtonPress.GetPersistentEventCount() > 0 && PlayerInput.Instance.Interact.Down)
-                    OnButtonPress.Invoke();
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:564e9ddf29ef3c6766753b968aa3ea4328718a29e59a9f065a2023ad1040c963
+size 818

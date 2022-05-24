@@ -1,30 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class Grenade : MonoBehaviour
-    {
-        public Vector2 initialForce;
-        public float timer = 1;
-        public GameObject explosion;
-        public float explosionTimer = 3;
-
-        Rigidbody2D Rigidbody;
-
-        void OnEnable()
-        {
-            Rigidbody = GetComponent<Rigidbody2D>();
-        }
-
-        IEnumerator Start()
-        {
-            Rigidbody.AddForce(initialForce);
-            yield return new WaitForSeconds(timer);
-            var eGo = Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(eGo, explosionTimer);
-            Destroy(gameObject);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9287362489229378a44826f6b6a698ba60ba7599c02bbb737e4b37db7bc41fc
+size 774

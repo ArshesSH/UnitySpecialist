@@ -1,20 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-
-[Serializable]
-public class ScreenFaderClip : PlayableAsset, ITimelineClipAsset
-{
-    public ScreenFaderBehaviour template = new ScreenFaderBehaviour ();
-
-    public ClipCaps clipCaps
-    {
-        get { return ClipCaps.Blending; }
-    }
-
-    public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
-    {
-        var playable = ScriptPlayable<ScreenFaderBehaviour>.Create (graph, template);
-        return playable;    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c20464da40172984a775cc3639b6707b0373c837d82191fd098e116d159f6ddd
+size 558

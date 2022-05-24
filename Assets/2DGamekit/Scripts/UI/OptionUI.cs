@@ -1,20 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class OptionUI : MonoBehaviour
-    {
-        public void ExitPause()
-        {
-            PlayerCharacter.PlayerInstance.Unpause();
-        }
-
-        public void RestartLevel()
-        {
-            ExitPause();
-            SceneController.RestartZone();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5b35c413f718d0b92d0598e29361ef3548d518f8dab73dc4eea595cf0b06722
+size 409

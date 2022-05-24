@@ -1,26 +1,3 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-
-[Serializable]
-public class TransformTweenClip : PlayableAsset, ITimelineClipAsset
-{
-    public TransformTweenBehaviour template = new TransformTweenBehaviour ();
-    public ExposedReference<Transform> startLocation;
-    public ExposedReference<Transform> endLocation;
-    
-    public ClipCaps clipCaps
-    {
-        get { return ClipCaps.Blending; }
-    }
-
-    public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
-    {
-        var playable = ScriptPlayable<TransformTweenBehaviour>.Create (graph, template);
-        TransformTweenBehaviour clone = playable.GetBehaviour ();
-        clone.startLocation = startLocation.Resolve (graph.GetResolver ());
-        clone.endLocation = endLocation.Resolve (graph.GetResolver ());
-        return playable;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b04aeca3cd7b77ea6cd468bce97ced595ebad515416a18562d6b43b81c8c3ae
+size 902

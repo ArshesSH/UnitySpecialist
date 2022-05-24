@@ -1,21 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-
-[Serializable]
-public class TimeDilationClip : PlayableAsset, ITimelineClipAsset
-{
-    public TimeDilationBehaviour template = new TimeDilationBehaviour ();
-
-    public ClipCaps clipCaps
-    {
-        get { return ClipCaps.Extrapolation | ClipCaps.Blending; }
-    }
-
-    public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
-    {
-        var playable = ScriptPlayable<TimeDilationBehaviour>.Create (graph, template);
-        return playable;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4778bbc170f93b9acb257181ce6b689b23f14c2824feb0867c606ca54bf11e3
+size 589

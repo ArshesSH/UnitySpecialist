@@ -1,26 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace Gamekit2D
-{
-    public class HealthPickup : MonoBehaviour
-    {
-        public int healthAmount = 1;
-        public UnityEvent OnGivingHealth;
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if(other.gameObject == PlayerCharacter.PlayerInstance.gameObject)
-            {
-                Damageable damageable = PlayerCharacter.PlayerInstance.damageable;
-                if (damageable.CurrentHealth < damageable.startingHealth)
-                {
-                    damageable.GainHealth(Mathf.Min(healthAmount, damageable.startingHealth - damageable.CurrentHealth));
-                    OnGivingHealth.Invoke();
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:42f0eb2372282a29be0f50af3731c83bcb131827035da9b183abf63659fee8c6
+size 837

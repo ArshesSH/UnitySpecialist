@@ -1,26 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    [RequireComponent(typeof(BoxCollider2D))]
-    public class Checkpoint : MonoBehaviour
-    {
-        public bool respawnFacingLeft;
-
-        private void Reset()
-        {
-            GetComponent<BoxCollider2D>().isTrigger = true; 
-        }
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            PlayerCharacter c = collision.GetComponent<PlayerCharacter>();
-            if(c != null)
-            {
-                c.SetChekpoint(this);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:15209d9c309b24793f67b9aa535948c74becbba4b44fa842cb40ddcf2f7d1343
+size 631

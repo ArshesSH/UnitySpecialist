@@ -1,19 +1,3 @@
-using TMPro;
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-using UnityEngine.UI;
-
-namespace Gamekit2D
-{
-    [TrackColor(0.7794118f, 0.4002983f, 0.1547362f)]
-    [TrackClipType(typeof(ScrollingTextClip))]
-    [TrackBindingType(typeof(TextMeshProUGUI))]
-    public class ScrollingTextTrack : TrackAsset
-    {
-        public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount)
-        {
-            return ScriptPlayable<ScrollingTextMixerBehaviour>.Create (graph, inputCount);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e0a097de17572a71cd4da025183b099b50de767ebd7a062eeded998433501c9
+size 575

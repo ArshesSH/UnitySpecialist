@@ -1,23 +1,3 @@
-﻿using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class DeadSMB : SceneLinkedSMB<PlayerCharacter>
-    {
-        public override void OnSLStatePostEnter (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            m_MonoBehaviour.SetMoveVector(m_MonoBehaviour.GetHurtDirection() * m_MonoBehaviour.hurtJumpSpeed);
-        }
-
-        public override void OnSLStateNoTransitionUpdate (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            m_MonoBehaviour.CheckForGrounded();
-            m_MonoBehaviour.AirborneVerticalMovement();
-        }
-
-        public override void OnSLStateExit (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            m_MonoBehaviour.SetMoveVector(Vector2.zero);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a09ad2a21b61229ab3d70d74dc42ea9af81ee24552123d42031970ae08967f0d
+size 816

@@ -1,23 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class StartScreenSpriteOffsetter : MonoBehaviour {
-
-        public float spriteOffset;
-        Vector3 initialPosition;
-        Vector3 newPosition;
-
-        private void Start()
-        {
-            initialPosition = transform.position;
-        }
-
-        void Update ()
-        {
-            transform.position = new Vector3 ((initialPosition.x + (spriteOffset * Input.mousePosition.x)), (initialPosition.y + (spriteOffset * Input.mousePosition.y)), initialPosition.z);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df642aa6a41d24df1bffaf16eac2ec38fca0e844a3db0a1c6b6d27091353003e
+size 628

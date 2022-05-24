@@ -1,29 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class FallthroughReseter : MonoBehaviour
-    {
-        public void StartFall(PlatformEffector2D effector)
-        {
-            StartCoroutine(FallCoroutine(effector));
-        }
-
-        IEnumerator FallCoroutine(PlatformEffector2D effector)
-        {
-            int playerLayerMask = 1 << LayerMask.NameToLayer("Player");
-        
-            effector.colliderMask &= ~playerLayerMask;
-            gameObject.layer = LayerMask.NameToLayer ("Default");
-
-            yield return new WaitForSeconds(0.5f);
-
-            effector.colliderMask |= playerLayerMask;
-            gameObject.layer = LayerMask.NameToLayer ("Platform");
-
-            Destroy(this);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:76a8b2684c8a42c60191bbde580aff28a8f199f154d1b9902b1523d89def4063
+size 818

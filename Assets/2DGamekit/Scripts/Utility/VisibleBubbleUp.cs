@@ -1,18 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    //Allow to bubble up a OnBecameVisible call. usefull to have parent object (without renderer)
-    //be notified when a child become visible
-    public class VisibleBubbleUp : MonoBehaviour
-    {
-        public System.Action<VisibleBubbleUp> objectBecameVisible;
-
-        private void OnBecameVisible()
-        {
-            objectBecameVisible(this);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47523ebc31f82fe93adeee8a60a2fcb847dd920b356c482058f1690c026f5fa9
+size 494

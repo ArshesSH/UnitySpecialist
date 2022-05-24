@@ -1,24 +1,3 @@
-﻿using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class CrouchSMB : SceneLinkedSMB<PlayerCharacter>
-    {
-        public override void OnSLStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            m_MonoBehaviour.TeleportToColliderBottom();
-        }
-
-        public override void OnSLStateNoTransitionUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            m_MonoBehaviour.UpdateFacing();
-            m_MonoBehaviour.CheckForCrouching();
-            m_MonoBehaviour.CheckForHoldingGun();
-            m_MonoBehaviour.CheckForGrounded ();
-            if(m_MonoBehaviour.CheckForFallInput())
-                m_MonoBehaviour.MakePlatformFallthrough ();
-            m_MonoBehaviour.GroundedVerticalMovement ();
-            m_MonoBehaviour.GroundedHorizontalMovement (false);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad5f6fb4e0884c865ace71d53500f42e671f58feddb09d143eb3948ccbb90e8d
+size 893

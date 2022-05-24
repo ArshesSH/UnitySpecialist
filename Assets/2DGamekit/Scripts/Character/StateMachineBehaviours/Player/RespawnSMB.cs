@@ -1,16 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class RespawnSMB : SceneLinkedSMB<PlayerCharacter>
-    {
-        public override void OnSLStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            base.OnSLStateEnter(animator, stateInfo, layerIndex);
-
-            m_MonoBehaviour.SetMoveVector(Vector2.zero);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e253e8ad9c962a28fbcf3b9e47046cab09881923be7906ecf9086224e2156a15
+size 447

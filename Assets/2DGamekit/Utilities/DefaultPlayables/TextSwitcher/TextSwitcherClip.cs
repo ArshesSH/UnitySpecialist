@@ -1,20 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-
-[Serializable]
-public class TextSwitcherClip : PlayableAsset, ITimelineClipAsset
-{
-    public TextSwitcherBehaviour template = new TextSwitcherBehaviour ();
-
-    public ClipCaps clipCaps
-    {
-        get { return ClipCaps.Blending; }
-    }
-
-    public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
-    {
-        var playable = ScriptPlayable<TextSwitcherBehaviour>.Create (graph, template);
-        return playable;    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac36cb63d04cc63ff1ca6be5483cbd5139f83ec953c174ecd961e9276bb41da5
+size 562

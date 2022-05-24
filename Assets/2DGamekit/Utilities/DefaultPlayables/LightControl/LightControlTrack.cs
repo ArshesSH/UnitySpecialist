@@ -1,36 +1,3 @@
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-using System.Collections.Generic;
-
-[TrackColor(0.9454092f, 0.9779412f, 0.3883002f)]
-[TrackClipType(typeof(LightControlClip))]
-[TrackBindingType(typeof(Light))]
-public class LightControlTrack : TrackAsset
-{
-    public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount)
-    {
-        return ScriptPlayable<LightControlMixerBehaviour>.Create (graph, inputCount);
-    }
-
-    public override void GatherProperties (PlayableDirector director, IPropertyCollector driver)
-    {
-#if UNITY_EDITOR
-        Light trackBinding = director.GetGenericBinding(this) as Light;
-
-        if (trackBinding == null)
-            return;
-        
-        var serializedObject = new UnityEditor.SerializedObject (trackBinding);
-        var iterator = serializedObject.GetIterator();
-        while (iterator.NextVisible(true))
-        {
-            if (iterator.hasVisibleChildren)
-                continue;
-
-            driver.AddFromName<Light>(trackBinding.gameObject, iterator.propertyPath);
-        }
-#endif
-        base.GatherProperties (director, driver);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bad68496f8b76efd55c43d455e086e6e67ba1dce6c74c36dbbaa4ae7630d27c0
+size 1193

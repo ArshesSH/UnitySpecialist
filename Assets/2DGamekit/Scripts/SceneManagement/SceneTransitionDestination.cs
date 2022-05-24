@@ -1,19 +1,3 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-
-namespace Gamekit2D
-{
-    public class SceneTransitionDestination : MonoBehaviour
-    {
-        public enum DestinationTag
-        {
-            A, B, C, D, E, F, G,
-        }
-
-
-        public DestinationTag destinationTag;    // This matches the tag chosen on the TransitionPoint that this is the destination for.
-        [Tooltip("This is the gameobject that has transitioned.  For example, the player.")]
-        public GameObject transitioningGameObject;
-        public UnityEvent OnReachDestination;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:841b9c67808a942ff79d6db123e080d7dc8a1deefd8e4b87960ef890f17a5e34
+size 579

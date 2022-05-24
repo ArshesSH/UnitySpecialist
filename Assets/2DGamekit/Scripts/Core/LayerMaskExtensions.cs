@@ -1,14 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public static class LayerMaskExtensions
-    {
-        public static bool Contains (this LayerMask layers, GameObject gameObject)
-        {
-            return 0 != (layers.value & 1 << gameObject.layer);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abd1cb33926532fc2bf11136d3f157398ab9f7f2b458cf1fa873b65bd384518f
+size 342

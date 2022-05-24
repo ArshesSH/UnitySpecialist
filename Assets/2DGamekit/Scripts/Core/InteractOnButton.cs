@@ -1,35 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace Gamekit2D
-{
-    public class InteractOnButton : InteractOnTrigger
-    {
-
-        public string buttonName = "X";
-        public UnityEvent OnButtonPress;
-
-        bool m_CanExecuteButtons = false;
-
-        protected override void ExecuteOnEnter(Collider other)
-        {
-            m_CanExecuteButtons = true;
-        }
-
-        protected override void ExecuteOnExit(Collider other)
-        {
-            m_CanExecuteButtons = false;
-        }
-
-        void Update()
-        {
-            if (m_CanExecuteButtons && Input.GetButtonDown(buttonName))
-            {
-                OnButtonPress.Invoke();
-            }
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:19e2a8206b364c018e1798621e40dc8c2fa041b565aae56c9765e6fd59d7e59a
+size 789

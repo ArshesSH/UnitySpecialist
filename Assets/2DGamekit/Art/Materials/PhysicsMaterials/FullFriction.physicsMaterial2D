@@ -1,10 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!62 &6200000
-PhysicsMaterial2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: FullFriction
-  friction: 0.4
-  bounciness: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:38d42d41ff3e197af66cf886bbe78a35b74bd710805825c74cdae338669f1dd5
+size 235

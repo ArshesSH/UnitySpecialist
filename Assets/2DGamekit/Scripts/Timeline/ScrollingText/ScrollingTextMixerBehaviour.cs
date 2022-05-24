@@ -1,33 +1,3 @@
-using System;
-using TMPro;
-using UnityEngine;
-using UnityEngine.Playables;
-
-namespace Gamekit2D
-{
-    public class ScrollingTextMixerBehaviour : PlayableBehaviour
-    {
-        public override void ProcessFrame(Playable playable, FrameData info, object playerData)
-        {
-            TextMeshProUGUI trackBinding = playerData as TextMeshProUGUI;
-
-            if (!trackBinding)
-                return;
-
-            int inputCount = playable.GetInputCount ();
-
-            for (int i = 0; i < inputCount; i++)
-            {
-                float inputWeight = playable.GetInputWeight(i);
-                ScriptPlayable<ScrollingTextBehaviour> inputPlayable = (ScriptPlayable<ScrollingTextBehaviour>)playable.GetInput(i);
-                ScrollingTextBehaviour input = inputPlayable.GetBehaviour ();
-
-                if (Mathf.Approximately (inputWeight, 1f))
-                {
-                    string message = input.GetMessage ((float)inputPlayable.GetTime ());
-                    trackBinding.text = message;
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:edbcef7c1178a3fa39429f27364c1dd9343f440d328889bb529676f789d32318
+size 1098

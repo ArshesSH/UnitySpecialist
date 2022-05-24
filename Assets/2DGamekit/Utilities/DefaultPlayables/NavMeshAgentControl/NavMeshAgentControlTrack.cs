@@ -1,15 +1,3 @@
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Timeline;
-using UnityEngine.AI;
-
-[TrackColor(0.855f, 0.8623f, 0.87f)]
-[TrackClipType(typeof(NavMeshAgentControlClip))]
-[TrackBindingType(typeof(NavMeshAgent))]
-public class NavMeshAgentControlTrack : TrackAsset
-{
-    public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount)
-    {
-        return ScriptPlayable<NavMeshAgentControlMixerBehaviour>.Create (graph, inputCount);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41f511fad7529250c8eecaf84294ec87320b4b18ac2677e7a81c0f6e9b966377
+size 499

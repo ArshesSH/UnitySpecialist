@@ -1,29 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gamekit2D
-{
-    public class TimedDisabling : MonoBehaviour
-    {
-
-        public float timeBeforeDisable = 1.0f;
-
-        private float m_Timer = 0.0f;
-
-        private void OnEnable()
-        {
-            m_Timer = timeBeforeDisable;
-        }
-
-        private void Update()
-        {
-            m_Timer -= Time.deltaTime;
-
-            if(m_Timer < 0.0f)
-            {
-                gameObject.SetActive(false);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:605fdac70a2e6b5cffa598edbc479bbd060135fb5d663e25d9b90ec05074ae4a
+size 570
